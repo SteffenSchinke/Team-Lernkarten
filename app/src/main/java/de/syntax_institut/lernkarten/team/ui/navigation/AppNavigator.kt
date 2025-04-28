@@ -65,11 +65,10 @@ fun AppNavigator() {
         ) {
 
             composable<HomeRoute> {
-
                 Home()
             }
 
-            composable< LibraryRoute> {
+            composable<LibraryRoute> {
 
                 Library()
             }
