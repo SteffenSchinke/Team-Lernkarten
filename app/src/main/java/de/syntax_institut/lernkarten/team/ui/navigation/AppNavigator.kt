@@ -60,23 +60,15 @@ fun AppNavigator() {
         NavHost(
 
             navController = navController,
-            startDestination = selectedTabItem.route.toString(),
+            startDestination = selectedTabItem.route,
             modifier = Modifier.padding(innerPadding)
         ) {
 
-            composable<HomeRoute> {
-                Home()
-            }
+            composable<HomeRoute> { Home() }
 
-            composable<LibraryRoute> {
+            composable<LibraryRoute> { Library() }
 
-                Library()
-            }
-
-            composable<SettingsRoute> {
-
-                Setting()
-            }
+            composable<SettingsRoute> { Setting() }
         }
     }
 }
