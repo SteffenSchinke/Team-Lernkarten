@@ -1,0 +1,44 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+build/
+out/
+
+# IDE config files
+/idea/
+*.iml
+*.iws
+
+# Local configuration file (sdk path, etc)
+/local.properties
+
+# Gradle cache
+.gradle/
+
+# Temporary files
+*.log
+tmp/
+*.swp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# C++-spezifische Build-Artefakte
+.*externalNativeBuild
+.*cxx
+
+# Kotlin-spezifische Dateien (optional)
+*.kotlin_module
+/captures
