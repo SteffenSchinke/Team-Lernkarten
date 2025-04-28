@@ -1,4 +1,4 @@
-package de.syntax_institut.lernkarten.team.ui.theme
+package de.syntax_institut.lernkarten.team.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*

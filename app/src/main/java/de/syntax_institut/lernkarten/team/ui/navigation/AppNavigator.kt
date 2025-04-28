@@ -19,9 +19,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import de.syntax_institut.lernkarten.team.ui.screens.Home
 import de.syntax_institut.lernkarten.team.ui.screens.Library
-import de.syntax_institut.lernkarten.team.ui.screens.Settings
+import de.syntax_institut.lernkarten.team.ui.screens.Setting
+import de.syntax_institut.lernkarten.team.ui.screens.Home
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -76,7 +76,7 @@ fun AppNavigator() {
 
             composable<SettingsRoute> {
 
-                Settings()
+                Setting()
             }
         }
     }
