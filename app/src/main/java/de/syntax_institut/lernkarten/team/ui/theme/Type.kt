@@ -1,34 +1,30 @@
 package de.syntax_institut.lernkarten.team.ui.theme
 
 import androidx.compose.material3.Typography
-import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
+import de.syntax_institut.lernkarten.team.R
 
-// Set of Material typography styles to start with
+val novaSquareFontFamily = FontFamily(
+    Font(R.font.nova_square_regular)
+)
+
+val baseline = Typography()
+
 val Typography = Typography(
-    bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    )
-    /* Other default text styles to override
-    titleLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 22.sp,
-        lineHeight = 28.sp,
-        letterSpacing = 0.sp
-    ),
-    labelSmall = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
-    )
-    */
+    displayLarge = baseline.displayLarge.copy(fontFamily = novaSquareFontFamily),
+    displayMedium = baseline.displayMedium.copy(fontFamily = novaSquareFontFamily),
+    displaySmall = baseline.displaySmall.copy(fontFamily = novaSquareFontFamily),
+    headlineLarge = baseline.headlineLarge.copy(fontFamily = novaSquareFontFamily),
+    headlineMedium = baseline.headlineMedium.copy(fontFamily = novaSquareFontFamily),
+    headlineSmall = baseline.headlineSmall.copy(fontFamily = novaSquareFontFamily),
+    titleLarge = baseline.titleLarge.copy(fontFamily = novaSquareFontFamily),
+    titleMedium = baseline.titleMedium.copy(fontFamily = novaSquareFontFamily),
+    titleSmall = baseline.titleSmall.copy(fontFamily = novaSquareFontFamily),
+    bodyLarge = baseline.bodyLarge.copy(fontFamily = novaSquareFontFamily),
+    bodyMedium = baseline.bodyMedium.copy(fontFamily = novaSquareFontFamily),
+    bodySmall = baseline.bodySmall.copy(fontFamily = novaSquareFontFamily),
+    labelLarge = baseline.labelLarge.copy(fontFamily = novaSquareFontFamily),
+    labelMedium = baseline.labelMedium.copy(fontFamily = novaSquareFontFamily),
+    labelSmall = baseline.labelSmall.copy(fontFamily = novaSquareFontFamily),
 )

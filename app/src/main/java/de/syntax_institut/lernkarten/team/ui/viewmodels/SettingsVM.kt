@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.asStateFlow
 // simple singleton implementation for app settings
 object SettingsVM {
 
-    private val _isDarkTheme = MutableStateFlow(false)
+    private val _isDarkTheme = MutableStateFlow(true)
     val isDarkTheme: StateFlow<Boolean> = _isDarkTheme.asStateFlow()
 
     fun toggleThemeMode(newValue: Boolean) {
