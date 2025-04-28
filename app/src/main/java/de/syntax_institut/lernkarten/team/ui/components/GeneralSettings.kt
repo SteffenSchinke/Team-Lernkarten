@@ -8,23 +8,23 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
 fun GeneralSettings() {
-    // Zustände für die Switches
     val darkModeEnabled = remember { mutableStateOf(false) }
     val notificationsEnabled = remember { mutableStateOf(true) }
 
     Column {
         Text(
-            text = "Allgemeine Einstellungen",
+            "Allgemeine Einstellungen",
             fontSize = 18.sp,
             modifier = Modifier.padding(vertical = 8.dp)
         )
 
-        // Spracheinstellung
+        // Spracheinstellung mit Wert rechts
         SettingItem(
             name = "Sprache",
             value = "Deutsch",
@@ -37,7 +37,8 @@ fun GeneralSettings() {
             action = {
                 Switch(
                     checked = darkModeEnabled.value,
-                    onCheckedChange = { darkModeEnabled.value = it }
+                    onCheckedChange = { darkModeEnabled.value = it },
+                    modifier = Modifier.padding(start = 8.dp)
                 )
             }
         )
@@ -48,9 +49,18 @@ fun GeneralSettings() {
             action = {
                 Switch(
                     checked = notificationsEnabled.value,
-                    onCheckedChange = { notificationsEnabled.value = it }
+                    onCheckedChange = { notificationsEnabled.value = it },
+                    modifier = Modifier.padding(start = 8.dp)
                 )
             }
         )
     }
+}
+
+
+
+@Preview(showBackground = true)
+@Composable
+fun GerenralSettingView() {
+    GeneralSettings()
 }

@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -20,7 +21,6 @@ fun ProfileSection() {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxWidth()
     ) {
-        // Profilbild (hier mit Platzhalter)
         Image(
             painter = painterResource(id = android.R.drawable.sym_def_app_icon),
             contentDescription = "Profilbild",
@@ -29,18 +29,15 @@ fun ProfileSection() {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Name
-        Text(
-            text = "Max Mustermann",
-            fontSize = 20.sp
-        )
-
+        Text("Max Mustermann", fontSize = 20.sp)
         Spacer(modifier = Modifier.height(4.dp))
-
-        // Username
-        Text(
-            text = "@maxmustermann",
-            fontSize = 16.sp
-        )
+        Text("@maxmustermann", fontSize = 16.sp)
     }
+}
+
+
+@Preview(showBackground = true)
+@Composable
+fun ProfileSectionView() {
+    ProfileSection()
 }

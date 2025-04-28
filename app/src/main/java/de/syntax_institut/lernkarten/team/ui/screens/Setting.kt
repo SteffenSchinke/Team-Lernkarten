@@ -14,6 +14,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import de.syntax_institut.lernkarten.team.ui.components.GeneralSettings
+import de.syntax_institut.lernkarten.team.ui.components.ProfileSection
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -23,12 +25,10 @@ fun Setting() {
             .verticalScroll(rememberScrollState())
             .padding(16.dp)
     ) {
-        // Profilbereich
         ProfileSection()
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Kontoverwaltung Button
         Button(
             onClick = { /* Kontoverwaltung öffnen */ },
             modifier = Modifier.fillMaxWidth()
@@ -38,7 +38,6 @@ fun Setting() {
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Allgemeine Einstellungen
         GeneralSettings()
     }
 }
