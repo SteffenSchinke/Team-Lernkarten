@@ -1,4 +1,4 @@
-package de.syntax_institut.lernkarten.team.ui.theme
+package de.syntax_institut.lernkarten.team.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -13,7 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun StartseiteScreen() {
+fun Home() {
     var selectedIndex by remember { mutableStateOf(0) }
 
     Scaffold(
@@ -82,5 +82,5 @@ fun EinstellungenContent() {
 @Preview(showBackground = true)
 @Composable
 fun StartseiteScreenPreview() {
-    StartseiteScreen()
+    Home()
 }
