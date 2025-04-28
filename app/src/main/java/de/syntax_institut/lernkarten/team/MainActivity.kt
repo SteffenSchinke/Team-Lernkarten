@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import de.syntax_institut.lernkarten.team.ui.components.AppMain
 import de.syntax_institut.lernkarten.team.ui.navigation.AppNavigator
 import de.syntax_institut.lernkarten.team.ui.theme.LernkartenTheme
 import de.syntax_institut.lernkarten.team.ui.viewmodels.SettingsVM
@@ -20,8 +21,9 @@ class MainActivity : ComponentActivity() {
 
             LernkartenTheme(darkTheme = isDarkTheme) {
 
-                AppNavigator()
+                AppMain()
             }
         }
     }
 }
+

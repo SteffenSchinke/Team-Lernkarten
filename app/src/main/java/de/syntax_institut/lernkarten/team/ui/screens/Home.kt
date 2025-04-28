@@ -1,41 +1,32 @@
 package de.syntax_institut.lernkarten.team.ui.screens
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
+import android.content.res.Configuration
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Surface
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Home() {
-    var selectedIndex by remember { mutableStateOf(0) }
+fun Home(
 
-    Scaffold(
+    modifier: Modifier = Modifier
+) {
 
-    ) { innerPadding ->
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding),
-            contentAlignment = Alignment.Center
-        ) {
+    Surface(
 
-        }
+        modifier = modifier
+    ) {
+
+
     }
 }
 
-
-
-
-
-@Preview(showBackground = true)
+@Preview(showBackground = true, name = "Light")
+@Preview(showBackground = true, name = "Dark", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
-fun StartseiteScreenPreview() {
+fun HomePreview() {
+
     Home()
 }
