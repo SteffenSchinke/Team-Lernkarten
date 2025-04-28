@@ -5,7 +5,5 @@ data class StudyStats(
     val userId: Long,
     val deckId: Long,
     val cardsStudied: Int,
-    val correctAnswers: Int,
-    val incorrectAnswers: Int,
     val studyDate: Long = System.currentTimeMillis()
 )
