@@ -10,3 +10,6 @@ object LibraryRoute
 
 @Serializable
 object SettingsRoute
+
+@Serializable
+object NewDeckRoute
