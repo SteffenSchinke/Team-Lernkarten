@@ -17,23 +17,7 @@ fun Home() {
     var selectedIndex by remember { mutableStateOf(0) }
 
     Scaffold(
-        bottomBar = {
-            NavigationBar {
-                NavigationBarItem(
-                    icon = { Icon(Icons.Filled.Home, contentDescription = "Startseite") },
-                    label = { Text("Startseite") },
-                    selected = selectedIndex == 0,
-                    onClick = { selectedIndex = 0 }
-                )
 
-                NavigationBarItem(
-                    icon = { Icon(Icons.Filled.Settings, contentDescription = "Einstellungen") },
-                    label = { Text("Einstellungen") },
-                    selected = selectedIndex == 1,
-                    onClick = { selectedIndex = 1}
-                )
-            }
-        }
     ) { innerPadding ->
         Box(
             modifier = Modifier
@@ -41,43 +25,14 @@ fun Home() {
                 .padding(innerPadding),
             contentAlignment = Alignment.Center
         ) {
-            when (selectedIndex) {
-                0 -> StartseiteContent()
-                2 -> EinstellungenContent()
-            }
+
         }
     }
 }
 
-@Composable
-fun StartseiteContent() {
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(text = "Neues Deck erstellen oder aus Bibliothek hinzufügen")
-        Spacer(modifier = Modifier.height(16.dp))
-        FloatingActionButton(
-            onClick = { /* TODO: Neues Deck erstellen */ },
-            containerColor = MaterialTheme.colorScheme.primary
-        ) {
-            Icon(Icons.Default.Home, contentDescription = "Neues Deck")
-        }
-    }
-}
 
-@Composable
-fun BibliothekContent() {
-    Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
-        Text(text = "Bibliothek wird hier angezeigt")
-    }
-}
 
-@Composable
-fun EinstellungenContent() {
-    Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
-        Text(text = "Einstellungen")
-    }
-}
+
 
 @Preview(showBackground = true)
 @Composable
