@@ -29,8 +29,8 @@ fun StartseiteScreen() {
                 NavigationBarItem(
                     icon = { Icon(Icons.Filled.Settings, contentDescription = "Einstellungen") },
                     label = { Text("Einstellungen") },
-                    selected = selectedIndex == 2,
-                    onClick = { selectedIndex = 2 }
+                    selected = selectedIndex == 1,
+                    onClick = { selectedIndex = 1}
                 )
             }
         }
@@ -43,7 +43,6 @@ fun StartseiteScreen() {
         ) {
             when (selectedIndex) {
                 0 -> StartseiteContent()
-                1 -> BibliothekContent()
                 2 -> EinstellungenContent()
             }
         }
