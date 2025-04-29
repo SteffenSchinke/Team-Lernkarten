@@ -42,6 +42,8 @@ android {
 
 dependencies {
 
+    implementation(libs.androidx.material.icons.extended)
+    implementation(libs.colorpicker.compose)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.material3)
     implementation(libs.androidx.navigation.compose)
@@ -55,6 +57,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.accompanist.flowlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

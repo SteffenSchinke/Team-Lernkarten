@@ -1,4 +1,4 @@
-package de.syntax_institut.lernkarten.team.ui.c
+package de.syntax_institut.lernkarten.team.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.lazy.LazyColumn
@@ -6,7 +6,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.dp
 import de.syntax_institut.lernkarten.team.ui.data.Flashcard
-import de.syntax_institut.lernkarten.team.ui.components.FlashcardItem
 
 @Composable
 fun FlashcardList(

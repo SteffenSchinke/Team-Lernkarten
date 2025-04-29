@@ -15,7 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import de.syntax_institut.lernkarten.team.ui.c.FlashcardList
+import de.syntax_institut.lernkarten.team.ui.components.FlashcardList
 import de.syntax_institut.lernkarten.team.ui.components.DeckHeader
 import de.syntax_institut.lernkarten.team.ui.data.DataSource
 

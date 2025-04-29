@@ -1,6 +1,8 @@
 [versions]
+accompanistFlowlayout = "0.33.2-alpha"
 agp = "8.7.3"
 coilCompose = "2.5.0"
+colorpickerCompose = "1.0.6"
 kotlin = "2.0.21"
 coreKtx = "1.16.0"
 junit = "4.13.2"
@@ -13,12 +15,16 @@ composeBom = "2025.04.01"
 compose = "1.7.8"
 material = "1.12.0"
 material3 = "1.3.2"
+materialIconsExtended = "1.7.8"
 navigationCompose = "2.8.9"
 kotlinSerialization = "1.6.3"
 workRuntimeKtx = "2.10.1"
 
 [libraries]
+accompanist-flowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "accompanistFlowlayout" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
+colorpicker-compose = { module = "com.github.skydoves:colorpicker-compose", version.ref = "colorpickerCompose" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
