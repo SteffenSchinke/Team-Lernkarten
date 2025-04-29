@@ -10,3 +10,6 @@ data class Deck(
     val color: String = "#FFFFFF", // Farbcode für UI
     val flashcards: MutableList<Flashcard> = mutableListOf()
 )
+
+
+
