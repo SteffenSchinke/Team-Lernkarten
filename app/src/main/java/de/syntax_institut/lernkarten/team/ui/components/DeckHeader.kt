@@ -16,12 +16,14 @@ import de.syntax_institut.lernkarten.team.ui.data.Deck
 @Composable
 fun DeckHeader(deck: Deck) {
     Column {
-        // Deck Name
-        Text(
-            text = deck.name,
-            style = MaterialTheme.typography.headlineMedium,
-            fontWeight = FontWeight.Companion.Bold
-        )
+
+//            sts 29.04.25, is redundant - relocated in app navigation topbar
+//        // Deck Name
+//        Text(
+//            text = deck.name,
+//            style = MaterialTheme.typography.headlineMedium,
+//            fontWeight = FontWeight.Companion.Bold
+//        )
 
         // Deck Beschreibung
         Text(
