@@ -7,5 +7,5 @@ import androidx.compose.runtime.Composable
 @Composable
 fun NavBarTitle(title: String) {
 
-    Text(title, style = MaterialTheme.typography.headlineLarge)
+    Text(title, style = MaterialTheme.typography.headlineMedium)
 }

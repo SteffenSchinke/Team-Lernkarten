@@ -46,13 +46,15 @@ fun Library() {
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        // Titel
-        Text(
-            text = "Lernkarten Deck Bibliothek",
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(bottom = 16.dp)
-        )
+
+//            sts 29.04.25, is redundant - relocated in app navigation topbar
+//        // Titel
+//        Text(
+//            text = "Lernkarten Deck Bibliothek",
+//            fontSize = 24.sp,
+//            fontWeight = FontWeight.Bold,
+//            modifier = Modifier.padding(bottom = 16.dp)
+//        )
 
         // Suchfeld
         OutlinedTextField(

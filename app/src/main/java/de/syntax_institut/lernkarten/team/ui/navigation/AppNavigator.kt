@@ -38,16 +38,16 @@ fun AppNavigator() {
     val navController = rememberNavController()
     var selectedTabItem by rememberSaveable { mutableStateOf(TabItem.HOME) }
     val navBackStackEntry by navController.currentBackStackEntryAsState()
-    val currentRoute = navBackStackEntry?.destination?.route?.substringBefore("/")
+    val currentRoute = navBackStackEntry?.destination?.route?.substringBefore("?")
 
     Scaffold(
         topBar = {
             TopAppBar(
                 title = {
                     when (currentRoute) {
-                        HomeRoute::class.qualifiedName -> NavBarTitle("Home")
-                        LibraryRoute::class.qualifiedName -> NavBarTitle("Library")
-                        SettingsRoute::class.qualifiedName -> NavBarTitle("Settings")
+                        HomeRoute::class.qualifiedName -> NavBarTitle("Meine Lernkarten")
+                        LibraryRoute::class.qualifiedName -> NavBarTitle("Deck Bibliothek")
+                        SettingsRoute::class.qualifiedName -> NavBarTitle("Einstellungen")
                         NewDeckRoute::class.qualifiedName -> NavBarTitle("Neues Deck")
                         FlashcardRoute::class.qualifiedName -> {
                             val deckId = navBackStackEntry?.arguments?.getLong("deckId") ?: 0
@@ -58,7 +58,8 @@ fun AppNavigator() {
                 },
                 navigationIcon = {
                     when (currentRoute) {
-                        NewDeckRoute::class.qualifiedName, FlashcardRoute::class.qualifiedName -> NavBarBackButton(navController)
+                        NewDeckRoute::class.qualifiedName,
+                        FlashcardRoute::class.qualifiedName -> NavBarBackButton(navController)
                     }
                 }
             )

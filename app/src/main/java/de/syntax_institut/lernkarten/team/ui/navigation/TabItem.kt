@@ -13,7 +13,7 @@ enum class TabItem(
     val tabIcon: ImageVector
 ) {
 
-    HOME(HomeRoute, "Home", Icons.Default.Home),
-    SEARCH(LibraryRoute, "Library", Icons.AutoMirrored.Filled.List),
-    SETTINGS(SettingsRoute, "Settings", Icons.Default.Settings)
+    HOME(HomeRoute, "Lernkarten", Icons.Default.Home),
+    SEARCH(LibraryRoute, "Bibliothek", Icons.AutoMirrored.Filled.List),
+    SETTINGS(SettingsRoute, "Enstellungen", Icons.Default.Settings)
 }

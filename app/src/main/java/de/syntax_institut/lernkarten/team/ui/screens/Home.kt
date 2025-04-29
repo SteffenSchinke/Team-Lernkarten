@@ -61,12 +61,13 @@ fun Home(
                 .fillMaxSize()
                 .padding(16.dp)
         ) {
-            // Überschrift
-            Text(
-                "Meine Lernkarten",
-                style = MaterialTheme.typography.headlineMedium,
-                modifier = Modifier.padding(bottom = 16.dp)
-            )
+//            sts 29.04.25, is redundant - relocated in app navigation topbar
+//            // Überschrift
+//            Text(
+//                "Meine Lernkarten",
+//                style = MaterialTheme.typography.headlineMedium,
+//                modifier = Modifier.padding(bottom = 16.dp)
+//            )
 
             // Decks Liste
             DecksList(
