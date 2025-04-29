@@ -1,5 +1,6 @@
 package de.syntax_institut.lernkarten.team.ui.screens
 
+import android.content.res.Configuration
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -42,8 +43,10 @@ fun Setting() {
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, name = "Light")
+@Preview(showBackground = true, name = "Dark", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
 fun SettingPreview() {
+
     Setting()
 }

@@ -13,3 +13,6 @@ object SettingsRoute
 
 @Serializable
 object NewDeckRoute
+
+@Serializable
+object AppLauncherRoute

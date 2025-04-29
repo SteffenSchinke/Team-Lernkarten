@@ -1,86 +1,32 @@
 package de.syntax_institut.lernkarten.team.ui.screens
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
+import android.content.res.Configuration
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Surface
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Home() {
-    var selectedIndex by remember { mutableStateOf(0) }
+fun Home(
 
-    Scaffold(
-        bottomBar = {
-            NavigationBar {
-                NavigationBarItem(
-                    icon = { Icon(Icons.Filled.Home, contentDescription = "Startseite") },
-                    label = { Text("Startseite") },
-                    selected = selectedIndex == 0,
-                    onClick = { selectedIndex = 0 }
-                )
+    modifier: Modifier = Modifier
+) {
 
-                NavigationBarItem(
-                    icon = { Icon(Icons.Filled.Settings, contentDescription = "Einstellungen") },
-                    label = { Text("Einstellungen") },
-                    selected = selectedIndex == 1,
-                    onClick = { selectedIndex = 1}
-                )
-            }
-        }
-    ) { innerPadding ->
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding),
-            contentAlignment = Alignment.Center
-        ) {
-            when (selectedIndex) {
-                0 -> StartseiteContent()
-                2 -> EinstellungenContent()
-            }
-        }
-    }
-}
+    Surface(
 
-@Composable
-fun StartseiteContent() {
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally
+        modifier = modifier
     ) {
-        Text(text = "Neues Deck erstellen oder aus Bibliothek hinzufügen")
-        Spacer(modifier = Modifier.height(16.dp))
-        FloatingActionButton(
-            onClick = { /* TODO: Neues Deck erstellen */ },
-            containerColor = MaterialTheme.colorScheme.primary
-        ) {
-            Icon(Icons.Default.Home, contentDescription = "Neues Deck")
-        }
+
+
     }
 }
 
+@Preview(showBackground = true, name = "Light")
+@Preview(showBackground = true, name = "Dark", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
-fun BibliothekContent() {
-    Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
-        Text(text = "Bibliothek wird hier angezeigt")
-    }
-}
+fun HomePreview() {
 
-@Composable
-fun EinstellungenContent() {
-    Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
-        Text(text = "Einstellungen")
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun StartseiteScreenPreview() {
     Home()
 }
