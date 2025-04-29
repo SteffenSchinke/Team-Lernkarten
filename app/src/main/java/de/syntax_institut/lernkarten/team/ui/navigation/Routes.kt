@@ -16,3 +16,6 @@ object NewDeckRoute
 
 @Serializable
 object AppLauncherRoute
+
+@Serializable
+class FlashcardRoute(val deckId: Long = 0L)
